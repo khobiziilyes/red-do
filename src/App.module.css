@@ -35,7 +35,7 @@ input {
   grid-template-columns: 1fr;
 }
 
-/* @media (max-width: 870px) {
+@media (max-width: 870px) {
   .container {
     min-height: 800px;
     height: 100vh;
@@ -45,4 +45,4 @@ input {
     width: 79%;
     left: 10.5%;
   }
-} */
+}
