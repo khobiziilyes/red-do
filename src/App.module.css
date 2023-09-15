@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  background-image: url("/background.png");
+  background-repeat: no-repeat;
+  background-size: 100% 39%;
+  overflow: hidden;
+}
+
+.signin-signup {
+  position: absolute;
+
+  top: 26.4%;
+  height: 40.4%;
+
+  left: 32.3%;
+  width: 35.4%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* @media (max-width: 870px) {
+  .container {
+    min-height: 800px;
+    height: 100vh;
+  }
+
+  .signin-signup {
+    width: 79%;
+    left: 10.5%;
+  }
+} */
