@@ -35,6 +35,14 @@ input {
   grid-template-columns: 1fr;
 }
 
+.todo-list {
+  position: absolute;
+  top: 17.2%;
+
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
