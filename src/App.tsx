@@ -1,11 +1,25 @@
+import React from "react";
 import styles from "./App.module.css";
-import { AuthCard } from "./components";
+import { RegisterCard, LoginCard } from "./components";
 
 function App() {
+  const [isRegistering, setIsRegistering] = React.useState(false);
+  const onAuthed = () => {};
+
   return (
     <div className={styles.container}>
       <div className={styles["signin-signup"]}>
-        <AuthCard onLogin={() => {}} onCreateAccount={() => {}} />
+        {isRegistering ? (
+          <RegisterCard
+            onRegister={onAuthed}
+            onSwitch={() => setIsRegistering(false)}
+          />
+        ) : (
+          <LoginCard
+            onLogin={onAuthed}
+            onSwitch={() => setIsRegistering(true)}
+          />
+        )}
       </div>
     </div>
   );

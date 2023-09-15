@@ -23,14 +23,28 @@ const Button = ({ text, ...props }: ButtonProps) => (
 );
 
 type AuthCardProps = {
-  onLogin: () => void;
-  onCreateAccount: () => void;
+  onSubmit: () => void;
+  onSwitch: () => void;
+
+  title: string;
+  buttonText: string;
+
+  accountExistenceText: string;
+  accountExistenceAnchorText: string;
 };
 
-export const AuthCard = ({ onLogin, onCreateAccount }: AuthCardProps) => {
+export const AuthCard = ({
+  onSubmit,
+  onSwitch,
+
+  title,
+  buttonText,
+  accountExistenceText,
+  accountExistenceAnchorText,
+}: AuthCardProps) => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>Login</div>
+      <div className={styles.title}>{title}</div>
 
       <Input text="Email" placeholder="Enter your email" />
       <Input
@@ -39,20 +53,20 @@ export const AuthCard = ({ onLogin, onCreateAccount }: AuthCardProps) => {
         type="password"
       />
 
-      <Button text="Login" onClick={onLogin} />
+      <Button text={buttonText} onClick={onSubmit} />
 
       <div className={styles["account-existence-prompt"]}>
         <span>
           <span className={styles["account-existence-text"]}>
-            Don’t have an account?{" "}
+            {accountExistenceText}{" "}
           </span>
 
           <a
             href="#"
             className={styles["account-existence-anchor"]}
-            onClick={onCreateAccount}
+            onClick={onSwitch}
           >
-            Create an account
+            {accountExistenceAnchorText}
           </a>
         </span>
       </div>
