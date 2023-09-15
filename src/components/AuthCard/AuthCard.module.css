@@ -91,6 +91,7 @@
 
   background: #7b3dff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .cta:hover {
